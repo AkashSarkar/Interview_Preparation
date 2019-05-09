@@ -1,0 +1,52 @@
+Component is a self-sustaining,independent micro-entity which represnts a part of our UI.
+
+Props vs State:
+
+    Props:
+        If components were plain JavaScript functions, then props would be the function input. 
+        Going by that analogy, a component accepts an input (what we call props), processes it, 
+        and then renders some JSX code.React philosophy is that props should be immutable and 
+        top-down.What this means is that a parent component can pass on whatever data it wants 
+        to its children as props, but the child component cannot modify its props
+
+    States:
+        States, on the other hand, is like object owned by the component.States are own property 
+        of components.A component can initialize and modify States as necessary.
+        The state of the parent component usually ends up being props of the child component. 
+        When the state is passed out of the current scope, we refer to it as a prop.
+
+Class Components Vs Functional Components:
+
+    Functional Component:
+        Functional components are js functions.They take in an optional  input which we call
+        props.
+
+        example:
+        const button=(props)=>{(
+            <div>Hello,{props.name}</div>
+        )};
+    
+    Class Components:
+        The main deference between a Functional component and a class component is that class
+        components can have states.Class components can exist without state too. 
+
+        Example:
+            class Hello extends React.Component {
+                constructor(props) {
+                    super(props);
+                }
+                
+                render() {
+                    return(
+                        <div>
+                            Hello {props}
+                        </div>
+                    )
+                }
+            }
+
+    Stateful Components vs. Stateless Components:
+        This is another popular way of classifing components.Main deference between them is
+        the components that have states and the components that dont.
+
+
